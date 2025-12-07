@@ -1,0 +1,11 @@
+build/
+Debug/
+Release/
+*.o
+*.elf
+*.bin
+*.map
+*.lst
+.settings/
+.cproject
+.project

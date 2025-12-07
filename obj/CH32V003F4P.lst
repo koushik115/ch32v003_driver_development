@@ -1,0 +1,242 @@
+
+CH32V003F4P.elf:     file format elf32-littleriscv
+CH32V003F4P.elf
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000154 memsz 0x00000154 flags r-x
+    LOAD off    0x00001700 vaddr 0x20000700 paddr 0x20000700 align 2**12
+         filesz 0x00000000 memsz 0x00000100 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .init         000000a0  00000000  00000000  00001000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .highcodelalign 00000000  000000a0  000000a0  00001154  2**0
+                  CONTENTS
+  2 .highcode     00000000  20000000  20000000  00001154  2**0
+                  CONTENTS
+  3 .text         000000b4  000000a0  000000a0  000010a0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .fini         00000000  00000154  00000154  00001154  2**0
+                  CONTENTS, ALLOC, LOAD, CODE
+  5 .dalign       00000000  20000000  20000000  00001154  2**0
+                  CONTENTS
+  6 .dlalign      00000000  00000154  00000154  00001154  2**0
+                  CONTENTS
+  7 .data         00000000  20000000  20000000  00001154  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .bss          00000000  20000000  20000000  00000000  2**0
+                  ALLOC
+  9 .stack        00000100  20000700  20000700  00001700  2**0
+                  ALLOC
+ 10 .debug_info   00000065  00000000  00000000  00001154  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_abbrev 0000004d  00000000  00000000  000011b9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_aranges 00000050  00000000  00000000  00001208  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000038  00000000  00000000  00001258  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_line   00000189  00000000  00000000  00001290  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_str    0000013d  00000000  00000000  00001419  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .comment      00000033  00000000  00000000  00001556  2**0
+                  CONTENTS, READONLY
+ 17 .debug_frame  00000020  00000000  00000000  0000158c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .init	00000000 .init
+000000a0 l    d  .highcodelalign	00000000 .highcodelalign
+20000000 l    d  .highcode	00000000 .highcode
+000000a0 l    d  .text	00000000 .text
+00000154 l    d  .fini	00000000 .fini
+20000000 l    d  .dalign	00000000 .dalign
+00000154 l    d  .dlalign	00000000 .dlalign
+20000000 l    d  .data	00000000 .data
+20000000 l    d  .bss	00000000 .bss
+20000700 l    d  .stack	00000000 .stack
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 main.c
+20000800 g       .data	00000000 __global_pointer$
+000000a4  w      .text	00000000 TIM1_CC_IRQHandler
+000000a4  w      .text	00000000 HardFault_Handler
+000000a4  w      .text	00000000 SysTick_Handler
+000000a4  w      .text	00000000 PVD_IRQHandler
+000000a4  w      .text	00000000 NMI_Handler
+20000000 g       .bss	00000000 _sbss
+00000100 g       *ABS*	00000000 __stack_size
+000000a0 g       .init	00000000 _einit
+000000a4  w      .text	00000000 SPI1_IRQHandler
+000000a4  w      .text	00000000 AWU_IRQHandler
+000000a4  w      .text	00000000 EXTI7_0_IRQHandler
+000000a4  w      .text	00000000 DMA1_Channel4_IRQHandler
+000000a4  w      .text	00000000 ADC1_IRQHandler
+20000000 g       .bss	00000000 _ebss
+000000a4  w      .text	00000000 DMA1_Channel7_IRQHandler
+000000a4  w      .text	00000000 I2C1_EV_IRQHandler
+000000a4  w      .text	00000000 DMA1_Channel6_IRQHandler
+000000a4  w      .text	00000000 RCC_IRQHandler
+000000a4  w      .text	00000000 TIM1_TRG_COM_IRQHandler
+000000a4  w      .text	00000000 DMA1_Channel1_IRQHandler
+00000000 g       .init	00000000 _start
+20000000 g       .highcode	00000000 _highcode_vma_start
+20000000 g       .dalign	00000000 _data_vma
+000000a0 g     F .text	00000004 main
+000000a4  w      .text	00000000 DMA1_Channel5_IRQHandler
+000000a0 g       .highcodelalign	00000000 _highcode_lma
+00000000 g       .init	00000000 _sinit
+000000a4  w      .text	00000000 DMA1_Channel3_IRQHandler
+000000a4  w      .text	00000000 TIM1_UP_IRQHandler
+000000a4  w      .text	00000000 WWDG_IRQHandler
+000000a4  w      .text	00000000 TIM2_IRQHandler
+20000800 g       .stack	00000000 _eusrstack
+000000a4  w      .text	00000000 SW_Handler
+000000a4  w      .text	00000000 TIM1_BRK_IRQHandler
+20000000 g       .data	00000000 _edata
+20000000 g       .highcode	00000000 _highcode_vma_end
+00000154 g       .dlalign	00000000 _data_lma
+000000a4  w      .text	00000000 DMA1_Channel2_IRQHandler
+000000a6  w      .text	00000000 handle_reset
+000000a4  w      .text	00000000 FLASH_IRQHandler
+000000a4  w      .text	00000000 USART1_IRQHandler
+000000a4  w      .text	00000000 I2C1_ER_IRQHandler
+
+
+
+Disassembly of section .init:
+
+00000000 <_sinit>:
+   0:	0a60006f          	j	a6 <handle_reset>
+   4:	0000                	unimp
+   6:	0000                	unimp
+   8:	00a4                	addi	s1,sp,72
+   a:	0000                	unimp
+   c:	00a4                	addi	s1,sp,72
+	...
+  2e:	0000                	unimp
+  30:	00a4                	addi	s1,sp,72
+  32:	0000                	unimp
+  34:	0000                	unimp
+  36:	0000                	unimp
+  38:	00a4                	addi	s1,sp,72
+  3a:	0000                	unimp
+  3c:	0000                	unimp
+  3e:	0000                	unimp
+  40:	00a4                	addi	s1,sp,72
+  42:	0000                	unimp
+  44:	00a4                	addi	s1,sp,72
+  46:	0000                	unimp
+  48:	00a4                	addi	s1,sp,72
+  4a:	0000                	unimp
+  4c:	00a4                	addi	s1,sp,72
+  4e:	0000                	unimp
+  50:	00a4                	addi	s1,sp,72
+  52:	0000                	unimp
+  54:	00a4                	addi	s1,sp,72
+  56:	0000                	unimp
+  58:	00a4                	addi	s1,sp,72
+  5a:	0000                	unimp
+  5c:	00a4                	addi	s1,sp,72
+  5e:	0000                	unimp
+  60:	00a4                	addi	s1,sp,72
+  62:	0000                	unimp
+  64:	00a4                	addi	s1,sp,72
+  66:	0000                	unimp
+  68:	00a4                	addi	s1,sp,72
+  6a:	0000                	unimp
+  6c:	00a4                	addi	s1,sp,72
+  6e:	0000                	unimp
+  70:	00a4                	addi	s1,sp,72
+  72:	0000                	unimp
+  74:	00a4                	addi	s1,sp,72
+  76:	0000                	unimp
+  78:	00a4                	addi	s1,sp,72
+  7a:	0000                	unimp
+  7c:	00a4                	addi	s1,sp,72
+  7e:	0000                	unimp
+  80:	00a4                	addi	s1,sp,72
+  82:	0000                	unimp
+  84:	00a4                	addi	s1,sp,72
+  86:	0000                	unimp
+  88:	00a4                	addi	s1,sp,72
+  8a:	0000                	unimp
+  8c:	00a4                	addi	s1,sp,72
+  8e:	0000                	unimp
+  90:	00a4                	addi	s1,sp,72
+  92:	0000                	unimp
+  94:	00a4                	addi	s1,sp,72
+  96:	0000                	unimp
+  98:	00a4                	addi	s1,sp,72
+  9a:	0000                	unimp
+  9c:	0000                	unimp
+	...
+
+Disassembly of section .text:
+
+000000a0 <main>:
+  a0:	4501                	li	a0,0
+  a2:	8082                	ret
+
+000000a4 <ADC1_IRQHandler>:
+  a4:	a001                	j	a4 <ADC1_IRQHandler>
+
+000000a6 <handle_reset>:
+  a6:	20000197          	auipc	gp,0x20000
+  aa:	75a18193          	addi	gp,gp,1882 # 20000800 <__global_pointer$>
+  ae:	00018113          	mv	sp,gp
+  b2:	0a000513          	li	a0,160
+  b6:	20000597          	auipc	a1,0x20000
+  ba:	f4a58593          	addi	a1,a1,-182 # 20000000 <_highcode_vma_end>
+  be:	20000617          	auipc	a2,0x20000
+  c2:	f4260613          	addi	a2,a2,-190 # 20000000 <_highcode_vma_end>
+  c6:	00c5fa63          	bgeu	a1,a2,da <handle_reset+0x34>
+  ca:	00052283          	lw	t0,0(a0)
+  ce:	0055a023          	sw	t0,0(a1)
+  d2:	0511                	addi	a0,a0,4
+  d4:	0591                	addi	a1,a1,4
+  d6:	fec5eae3          	bltu	a1,a2,ca <handle_reset+0x24>
+  da:	15400513          	li	a0,340
+  de:	20000597          	auipc	a1,0x20000
+  e2:	f2258593          	addi	a1,a1,-222 # 20000000 <_highcode_vma_end>
+  e6:	20000617          	auipc	a2,0x20000
+  ea:	f1a60613          	addi	a2,a2,-230 # 20000000 <_highcode_vma_end>
+  ee:	00c5fa63          	bgeu	a1,a2,102 <__stack_size+0x2>
+  f2:	00052283          	lw	t0,0(a0)
+  f6:	0055a023          	sw	t0,0(a1)
+  fa:	0511                	addi	a0,a0,4
+  fc:	0591                	addi	a1,a1,4
+  fe:	fec5eae3          	bltu	a1,a2,f2 <handle_reset+0x4c>
+ 102:	20000517          	auipc	a0,0x20000
+ 106:	efe50513          	addi	a0,a0,-258 # 20000000 <_highcode_vma_end>
+ 10a:	20000597          	auipc	a1,0x20000
+ 10e:	ef658593          	addi	a1,a1,-266 # 20000000 <_highcode_vma_end>
+ 112:	00b57763          	bgeu	a0,a1,120 <__stack_size+0x20>
+ 116:	00052023          	sw	zero,0(a0)
+ 11a:	0511                	addi	a0,a0,4
+ 11c:	feb56de3          	bltu	a0,a1,116 <__stack_size+0x16>
+ 120:	000022b7          	lui	t0,0x2
+ 124:	88028293          	addi	t0,t0,-1920 # 1880 <_data_lma+0x172c>
+ 128:	30029073          	csrw	mstatus,t0
+ 12c:	428d                	li	t0,3
+ 12e:	80429073          	csrw	0x804,t0
+ 132:	00000297          	auipc	t0,0x0
+ 136:	ece28293          	addi	t0,t0,-306 # 0 <_sinit>
+ 13a:	0032e293          	ori	t0,t0,3
+ 13e:	30529073          	csrw	mtvec,t0
+ 142:	00000297          	auipc	t0,0x0
+ 146:	f5e28293          	addi	t0,t0,-162 # a0 <main>
+ 14a:	34129073          	csrw	mepc,t0
+ 14e:	30200073          	mret
+	...
