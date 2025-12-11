@@ -21,7 +21,7 @@
  *                     PD6 -- Tx
  *
  */
-
+#include "define.h"
 
 /* Global define */
 
@@ -38,5 +38,17 @@
  */
 int main(void)
 {
-   
+    volatile uint8_t clk = 0xFF;
+    volatile uint8_t rstSource = 0xFF;
+
+    RCC_SetSystemClock(RCC_SYSCLK_HSI);
+    clk = RCC_GetSystemClock();   // should be HSI
+
+    rstSource = RCC_GetResetSrc();
+
+    RCC_ClearResetFlag();
+
+    rstSource = RCC_GetResetSrc();
+
+    return 0;
 }

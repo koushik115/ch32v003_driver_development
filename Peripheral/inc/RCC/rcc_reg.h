@@ -1,11 +1,11 @@
 /*
-*@author Koushik
-*@filename rcc_reg.h
-*@project CH32V003F4P_Driver_Development
-*@processor CH32V003
-*@compiler GNU C Compiler
-*@date 27/11/2025
-*/
+ *@author Koushik
+ *@filename rcc_reg.h
+ *@project CH32V003F4P_Driver_Development
+ *@processor CH32V003
+ *@compiler GNU C Compiler
+ *@date 27/11/2025
+ */
 
 #ifndef RCC_REG_H
 #define RCC_REG_H
@@ -19,7 +19,6 @@
  * for the RCC block in the CH32V003 microcontroller.
  */
 #define RCC_BASE 0x40021000UL
-
 
 /**
  * @brief RCC Peripheral Register Map Structure.
@@ -58,9 +57,8 @@ typedef struct
     volatile uint32_t RESERVED0;
 
     /** @brief Control/status register (RCC_RSTSCKR) */
-    volatile uint32_t RSTSCKR;
-} RCC_TypeDef; 
-
+    volatile uint32_t RCC_RSTSCKR;
+} RCC_TypeDef;
 
 /**
  * @brief Pointer definition for accessing the RCC registers.
@@ -68,7 +66,6 @@ typedef struct
  * This macro casts the base address to a pointer of the RCC_TypeDef structure,
  * creating an easy-to-use symbol for accessing all RCC registers.
  */
-#define RCC ((RCC_TypeDef *) RCC_BASE)
-
+#define RCC ((RCC_TypeDef *)RCC_BASE)
 
 #endif /* RCC_REG_H */

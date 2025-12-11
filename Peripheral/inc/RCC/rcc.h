@@ -30,7 +30,7 @@ typedef enum
 {
     RCC_SYSCLK_HSI, /**< High-Speed Internal Clock (24MHz RC oscillator). */
     RCC_SYSCLK_HSE, /**< High-Speed External Clock (external crystal/ceramic resonator). */
-    RCC_SYSCLK_PLL,  /**< Phase-Locked Loop (derived from HSI or HSE). */
+    RCC_SYSCLK_PLL, /**< Phase-Locked Loop (derived from HSI or HSE). */
     RCC_INVALID_SRC /**< Invalid Clock Source. */
 } RCC_SYSCLK_SRC;
 
@@ -40,7 +40,7 @@ typedef enum
 typedef enum
 {
     PLL_CLKSRC_HSI, /**< High-Speed Internal Clock (24MHz RC oscillator). */
-    PLL_CLKSRC_HSE /**< High-Speed External Clock (external crystal/ceramic resonator). */
+    PLL_CLKSRC_HSE  /**< High-Speed External Clock (external crystal/ceramic resonator). */
 } PLL_CLKSRC;
 
 /**
@@ -51,7 +51,7 @@ typedef enum
     MCO_CLKSRC_SYSCLK = 4,
     MCO_CLKSRC_HSI, /**< High-Speed Internal Clock (24MHz RC oscillator). */
     MCO_CLKSRC_HSE, /**< High-Speed External Clock (external crystal/ceramic resonator). */
-    MCO_CLKSRC_PLL /**< Phase-Locked Loop (derived from HSI or HSE). */
+    MCO_CLKSRC_PLL  /**< Phase-Locked Loop (derived from HSI or HSE). */
 } MCO_CLKSRC;
 
 /**
@@ -61,15 +61,15 @@ typedef enum
  */
 typedef enum
 {
-    SYSCLK_DIV1,    /**< AHB clock is SYSCLK divided by 1. */
-    SYSCLK_DIV2 = 8,    /**< AHB clock is SYSCLK divided by 2. */
-    SYSCLK_DIV4,    /**< AHB clock is SYSCLK divided by 4. */
-    SYSCLK_DIV8,    /**< AHB clock is SYSCLK divided by 8. */
-    SYSCLK_DIV16,   /**< AHB clock is SYSCLK divided by 16. */
-    SYSCLK_DIV64,   /**< AHB clock is SYSCLK divided by 64. */
-    SYSCLK_DIV128,  /**< AHB clock is SYSCLK divided by 128. */
-    SYSCLK_DIV256,  /**< AHB clock is SYSCLK divided by 256. */
-    SYSCLK_DIV512,  /**< AHB clock is SYSCLK divided by 512. */
+    SYSCLK_DIV1,     /**< AHB clock is SYSCLK divided by 1. */
+    SYSCLK_DIV2 = 8, /**< AHB clock is SYSCLK divided by 2. */
+    SYSCLK_DIV4,     /**< AHB clock is SYSCLK divided by 4. */
+    SYSCLK_DIV8,     /**< AHB clock is SYSCLK divided by 8. */
+    SYSCLK_DIV16,    /**< AHB clock is SYSCLK divided by 16. */
+    SYSCLK_DIV64,    /**< AHB clock is SYSCLK divided by 64. */
+    SYSCLK_DIV128,   /**< AHB clock is SYSCLK divided by 128. */
+    SYSCLK_DIV256,   /**< AHB clock is SYSCLK divided by 256. */
+    SYSCLK_DIV512,   /**< AHB clock is SYSCLK divided by 512. */
 } RCC_AHB_PRESCALER;
 
 /**
@@ -79,12 +79,13 @@ typedef enum
  */
 typedef enum
 {
-    LPWR_RESET,    /**< Low-Power Reset (Standby/Stop mode entry). */
-    WWDG_RESET,    /**< Window Watchdog Reset. */
-    IWDG_RESET,    /**< Independent Watchdog Reset. */
-    SFTWR_RESET,   /**< Software Reset (triggered by setting the system reset bit). */
-    POR_RESET,     /**< Power-On Reset (or Brown-Out Reset). */
-    PIN_RESET      /**< External Reset Pin (NRST) Reset. */
+    LPWR_RESET,  /**< Low-Power Reset (Standby/Stop mode entry). */
+    WWDG_RESET,  /**< Window Watchdog Reset. */
+    IWDG_RESET,  /**< Independent Watchdog Reset. */
+    SFTWR_RESET, /**< Software Reset (triggered by setting the system reset bit). */
+    POR_RESET,   /**< Power-On Reset (or Brown-Out Reset). */
+    PIN_RESET,   /**< External Reset Pin (NRST) Reset. */
+    NO_RESET     /**< NO Reset. */
 } RCC_RESET_SRC;
 
 /**
@@ -95,26 +96,25 @@ typedef enum
 typedef enum
 {
     /* AHB Bus */
-    SRAM,           /**< System memory (SRAM) clock. */
-    DMA1,           /**< DMA controller 1 clock. */
+    SRAM, /**< System memory (SRAM) clock. */
+    DMA1, /**< DMA controller 1 clock. */
 
     /* APB2 Bus*/
-    USART1,         /**< USART1 clock (Serial Communication). */
-    SPI1,           /**< SPI1 clock. */
-    TIM1,           /**< Timer 1 clock. */
-    ADC1,           /**< ADC 1 clock. */
-    IOPD,           /**< Port D I/O clock. */
-    IOPC,           /**< Port C I/O clock. */
-    IOPA,           /**< Port A I/O clock. */
-    AFIO,           /**< Alternate Function I/O clock. */
+    USART1, /**< USART1 clock (Serial Communication). */
+    SPI1,   /**< SPI1 clock. */
+    TIM1,   /**< Timer 1 clock. */
+    ADC1,   /**< ADC 1 clock. */
+    IOPD,   /**< Port D I/O clock. */
+    IOPC,   /**< Port C I/O clock. */
+    IOPA,   /**< Port A I/O clock. */
+    AFIO,   /**< Alternate Function I/O clock. */
 
     /* APB1 Bus */
-    PWR,            /**< Power Interface clock. */
-    I2C1,           /**< I2C 1 clock. */
-    WWDG,           /**< Window Watchdog clock. */
-    TIM2            /**< Timer 2 clock. */
+    PWR,  /**< Power Interface clock. */
+    I2C1, /**< I2C 1 clock. */
+    WWDG, /**< Window Watchdog clock. */
+    TIM2  /**< Timer 2 clock. */
 } RCC_PERIPHERAL;
-
 
 // --- FUNCTION PROTOTYPES ---
 
@@ -207,5 +207,10 @@ RCC_STATUS RCC_PeripheralEnable(RCC_PERIPHERAL rccPeriph);
  */
 RCC_RESET_SRC RCC_GetResetSrc(void);
 
+/**
+ * @brief Clears all device reset flags in the Control/Status Register (RCC_RSTSCKR)
+ * @return RCC_STATUS indicating success.
+ */
+RCC_STATUS RCC_ClearResetFlag(void);
 
 #endif /* RCC_H */
