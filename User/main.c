@@ -6,7 +6,7 @@
  * Description        : Main program body.
  *********************************************************************************
  * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
- * Attention: This software (modified or not) and binary are used for 
+ * Attention: This software (modified or not) and binary are used for
  * microcontroller manufactured by Nanjing Qinheng Microelectronics.
  *******************************************************************************/
 
@@ -21,13 +21,12 @@
  *                     PD6 -- Tx
  *
  */
-#include "define.h"
-
+#include <stdint.h>
+#include "RCC/rcc.h"
+#include "GPIO/gpio.h"
 /* Global define */
 
-
 /* Global Variable */
-
 
 /*********************************************************************
  * @fn      main
@@ -38,17 +37,15 @@
  */
 int main(void)
 {
-    volatile uint8_t clk = 0xFF;
-    volatile uint8_t rstSource = 0xFF;
+    RCC_PeripheralEnable(IOPD);
 
-    RCC_SetSystemClock(RCC_SYSCLK_HSI);
-    clk = RCC_GetSystemClock();   // should be HSI
+    GPIO_Init(GPIOD, GPIO_PIN_0, MODE_OUTPUT_MODE_SPEED_10MHZ, OUTPUT_MODE_UNIVERSAL_PUSH_PULL, PIN_DEFAULT);
 
-    rstSource = RCC_GetResetSrc();
-
-    RCC_ClearResetFlag();
-
-    rstSource = RCC_GetResetSrc();
-
-    return 0;
+    while (1)
+    {
+        // Toggle Pin
+        GPIO_TogglePin(GPIOD, GPIO_PIN_0);
+        for (uint32_t i = 0; i < 5000000; i++)
+            ;
+    }
 }
