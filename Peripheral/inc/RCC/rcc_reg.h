@@ -11,6 +11,7 @@
 #define RCC_REG_H
 
 #include <stdint.h>
+#include "rcc_bits.h"
 
 /**
  * @brief Base address of the Reset and Clock Control (RCC) peripheral.

@@ -9,6 +9,9 @@
 #ifndef RCC_H
 #define RCC_H
 
+#include <stdint.h>
+#include "rcc_reg.h"
+
 // --- ENUMERATED TYPES ---
 
 /**

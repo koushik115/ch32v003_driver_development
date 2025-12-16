@@ -26,14 +26,14 @@
 #define PLLON_Pos 24
 #define PLLRDY_Pos 25
 // Single bit fields mask
-#define HSION_Msk (1 << HSION_Pos)
-#define HSIRDY_Msk (1 << HSIRDY_Pos)
-#define HSEON_Msk (1 << HSEON_Pos)
-#define HSERDY_Msk (1 << HSERDY_Pos)
-#define HSEBYP_Msk (1 << HSEBYP_Pos)
-#define CSSON_Msk (1 << CSSON_Pos)
-#define PLLON_Msk (1 << PLLON_Pos)
-#define PLLRDY_Msk (1 << PLLRDY_Pos)
+#define HSION_Msk (0x01 << HSION_Pos)
+#define HSIRDY_Msk (0x01 << HSIRDY_Pos)
+#define HSEON_Msk (0x01 << HSEON_Pos)
+#define HSERDY_Msk (0x01 << HSERDY_Pos)
+#define HSEBYP_Msk (0x01 << HSEBYP_Pos)
+#define CSSON_Msk (0x01 << CSSON_Pos)
+#define PLLON_Msk (0x01 << PLLON_Pos)
+#define PLLRDY_Msk (0x01 << PLLRDY_Pos)
 // Multi bit field Position
 #define HSITRIM_Pos 3
 #define HSICAL_Pos 8
@@ -46,7 +46,7 @@
 // Single bit fields position
 #define PLLSRC_Pos 16
 // Single bit fields mask
-#define PLLSRC_Msk (1 << PLLSRC_Pos)
+#define PLLSRC_Msk (0x01 << PLLSRC_Pos)
 // Multi bit field Pos
 #define SW_Pos 0
 #define SWS_Pos 2
@@ -78,20 +78,20 @@
 #define PLLRDYC_Pos 20
 #define CSSC_Pos 23
 // Single bit fields mask
-#define LSIRDYF_Msk (1 << LSIRDYF_Pos)
-#define HSIRDYF_Msk (1 << HSIRDYF_Pos)
-#define HSERDYF_Msk (1 << HSERDYF_Pos)
-#define PLLRDYF_Msk (1 << PLLRDYF_Pos)
-#define CSSF_Msk (1 << CSSF_Pos)
-#define LSIRDYIE_Msk (1 << LSIRDYIE_Pos)
-#define HSIRDYIE_Msk (1 << HSIRDYIE_Pos)
-#define HSERDYIE_Msk (1 << HSERDYIE_Pos)
-#define PLLRDYIE_Msk (1 << PLLRDYIE_Pos)
-#define LSIRDYC_Msk (1 << LSIRDYC_Pos)
-#define HSIRDYC_Msk (1 << HSIRDYC_Pos)
-#define HSERDYC_Msk (1 << HSERDYC_Pos)
-#define PLLRDYC_Msk (1 << PLLRDYC_Pos)
-#define CSSC_Msk (1 << CSSC_Pos)
+#define LSIRDYF_Msk (0x01 << LSIRDYF_Pos)
+#define HSIRDYF_Msk (0x01 << HSIRDYF_Pos)
+#define HSERDYF_Msk (0x01 << HSERDYF_Pos)
+#define PLLRDYF_Msk (0x01 << PLLRDYF_Pos)
+#define CSSF_Msk (0x01 << CSSF_Pos)
+#define LSIRDYIE_Msk (0x01 << LSIRDYIE_Pos)
+#define HSIRDYIE_Msk (0x01 << HSIRDYIE_Pos)
+#define HSERDYIE_Msk (0x01 << HSERDYIE_Pos)
+#define PLLRDYIE_Msk (0x01 << PLLRDYIE_Pos)
+#define LSIRDYC_Msk (0x01 << LSIRDYC_Pos)
+#define HSIRDYC_Msk (0x01 << HSIRDYC_Pos)
+#define HSERDYC_Msk (0x01 << HSERDYC_Pos)
+#define PLLRDYC_Msk (0x01 << PLLRDYC_Pos)
+#define CSSC_Msk (0x01 << CSSC_Pos)
 
 // APB2 Peripheral Reset Register (RCC_APB2PRSTR)
 
@@ -105,14 +105,14 @@
 #define SPI1RST_Pos 12
 #define USART1RST_Pos 14
 // Single bit fields mask
-#define AFIORST_Msk (1 << AFIORST_Pos)
-#define IOPARST_Msk (1 << IOPARST_Pos)
-#define IOPCRST_Msk (1 << IOPCRST_Pos)
-#define IOPDRST_Msk (1 << IOPDRST_Pos)
-#define ADC1RST_Msk (1 << ADC1RST_Pos)
-#define TIM1RST_Msk (1 << TIM1RST_Pos)
-#define SPI1RST_Msk (1 << SPI1RST_Pos)
-#define USART1RST_Msk (1 << USART1RST_Pos)
+#define AFIORST_Msk (0x01 << AFIORST_Pos)
+#define IOPARST_Msk (0x01 << IOPARST_Pos)
+#define IOPCRST_Msk (0x01 << IOPCRST_Pos)
+#define IOPDRST_Msk (0x01 << IOPDRST_Pos)
+#define ADC1RST_Msk (0x01 << ADC1RST_Pos)
+#define TIM1RST_Msk (0x01 << TIM1RST_Pos)
+#define SPI1RST_Msk (0x01 << SPI1RST_Pos)
+#define USART1RST_Msk (0x01 << USART1RST_Pos)
 
 // APB1 Peripheral Reset Register (RCC_AP12PRSTR)
 
@@ -122,10 +122,10 @@
 #define I2C1RST_Pos 21
 #define PWRRST_Pos 28
 // Single bit fields mask
-#define TIM2RST_Msk (1 << TIM2RST_Pos)
-#define WWDGRST_Msk (1 << WWDGRST_Pos)
-#define I2C1RST_Msk (1 << I2C1RST_Pos)
-#define PWRRST_Msk (1 << PWRRST_Pos)
+#define TIM2RST_Msk (0x01 << TIM2RST_Pos)
+#define WWDGRST_Msk (0x01 << WWDGRST_Pos)
+#define I2C1RST_Msk (0x01 << I2C1RST_Pos)
+#define PWRRST_Msk (0x01 << PWRRST_Pos)
 
 // AHB Peripheral Clock Enable Register (RCC_AHBPCENR)
 
@@ -133,8 +133,8 @@
 #define DMA1EN_Pos 0
 #define SRAMEN_Pos 2
 // Single bit fields mask
-#define DMA1EN_Msk (1 << DMA1EN_Pos)
-#define SRAMEN_Msk (1 << SRAMEN_Pos)
+#define DMA1EN_Msk (0x01 << DMA1EN_Pos)
+#define SRAMEN_Msk (0x01 << SRAMEN_Pos)
 
 // APB2 Peripheral Clock Enable Register (RCC_APB2PCENR)
 
@@ -148,14 +148,14 @@
 #define SPI1EN_Pos 12
 #define USART1EN_Pos 14
 // Single bit field mask
-#define AFIOEN_Msk (1 << AFIOEN_Pos)
-#define IOPAEN_Msk (1 << IOPAEN_Pos)
-#define IOPCEN_Msk (1 << IOPCEN_Pos)
-#define IOPDEN_Msk (1 << IOPDEN_Pos)
-#define ADC1EN_Msk (1 << ADC1EN_Pos)
-#define TIM1EN_Msk (1 << TIM1EN_Pos)
-#define SPI1EN_Msk (1 << SPI1EN_Pos)
-#define USART1EN_Msk (1 << USART1EN_Pos)
+#define AFIOEN_Msk (0x01 << AFIOEN_Pos)
+#define IOPAEN_Msk (0x01 << IOPAEN_Pos)
+#define IOPCEN_Msk (0x01 << IOPCEN_Pos)
+#define IOPDEN_Msk (0x01 << IOPDEN_Pos)
+#define ADC1EN_Msk (0x01 << ADC1EN_Pos)
+#define TIM1EN_Msk (0x01 << TIM1EN_Pos)
+#define SPI1EN_Msk (0x01 << SPI1EN_Pos)
+#define USART1EN_Msk (0x01 << USART1EN_Pos)
 
 // APB1 Peripheral Clock Enable Register (RCC_APB1CENR)
 
@@ -165,10 +165,10 @@
 #define I2C1EN_Pos 21
 #define PWREN_Pos 28
 // Single bit field mask
-#define TIM2EN_Msk (1 << TIM2EN_Pos)
-#define WWDGEN_Msk (1 << WWDGEN_Pos)
-#define I2C1EN_Msk (1 << I2C1EN_Pos)
-#define PWREN_Msk (1 << PWREN_Pos)
+#define TIM2EN_Msk (0x01 << TIM2EN_Pos)
+#define WWDGEN_Msk (0x01 << WWDGEN_Pos)
+#define I2C1EN_Msk (0x01 << I2C1EN_Pos)
+#define PWREN_Msk (0x01 << PWREN_Pos)
 
 // Control/Status Register (RCC_RSTSCKR)
 
@@ -183,14 +183,14 @@
 #define WWDGRSTF_Pos 30
 #define LPWRRSTF_Pos 31
 // Single bit field mask
-#define LSION_Msk (1 << LSION_Pos)
-#define LSIRDY_Msk (1 << LSIRDY_Pos)
-#define RMVF_Msk (1 << RMVF_Pos)
-#define PINRSTF_Msk (1 << PINRSTF_Pos)
-#define PORRSTF_Msk (1 << PORRSTF_Pos)
-#define SFTRSTF_Msk (1 << SFTRSTF_Pos)
-#define IWDGRSTF_Msk (1 << IWDGRSTF_Pos)
-#define WWDGRSTF_Msk (1 << WWDGRSTF_Pos)
-#define LPWRRSTF_Msk (1 << LPWRRSTF_Pos)
+#define LSION_Msk (0x01 << LSION_Pos)
+#define LSIRDY_Msk (0x01 << LSIRDY_Pos)
+#define RMVF_Msk (0x01 << RMVF_Pos)
+#define PINRSTF_Msk (0x01 << PINRSTF_Pos)
+#define PORRSTF_Msk (0x01 << PORRSTF_Pos)
+#define SFTRSTF_Msk (0x01 << SFTRSTF_Pos)
+#define IWDGRSTF_Msk (0x01 << IWDGRSTF_Pos)
+#define WWDGRSTF_Msk (0x01 << WWDGRSTF_Pos)
+#define LPWRRSTF_Msk (0x01 << LPWRRSTF_Pos)
 
 #endif /* RCC_BITS_H */

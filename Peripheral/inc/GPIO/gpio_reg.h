@@ -10,7 +10,8 @@
 #ifndef GPIO_REG_H
 #define GPIO_REG_H
 
-#include "define.h"
+#include <stdint.h>
+#include "gpio_bits.h"
 
 /**
  * @brief Base address for GPIO Port A (GPIOA) registers.
