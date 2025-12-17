@@ -6,7 +6,7 @@
  * Description        : Main program body.
  *********************************************************************************
  * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
- * Attention: This software (modified or not) and binary are used for
+ * Attention: This software (modified or not) and binary are used for 
  * microcontroller manufactured by Nanjing Qinheng Microelectronics.
  *******************************************************************************/
 
@@ -21,10 +21,11 @@
  *                     PD6 -- Tx
  *
  */
-#include <stdint.h>
+ #include <stdint.h>
 #include "RCC/rcc.h"
 #include "GPIO/gpio.h"
 /* Global define */
+
 
 /* Global Variable */
 
@@ -37,15 +38,11 @@
  */
 int main(void)
 {
-    RCC_PeripheralEnable(IOPD);
+    RCC_PeripheralEnable(IOPC);
+    
+    RCC_SetMCOPinOutput(MCO_CLKSRC_HSI);
 
-    GPIO_Init(GPIOD, GPIO_PIN_0, MODE_OUTPUT_MODE_SPEED_10MHZ, OUTPUT_MODE_UNIVERSAL_PUSH_PULL, PIN_DEFAULT);
+    GPIO_Init(GPIOC, GPIO_PIN_4, MODE_OUTPUT_MODE_SPEED_50MHZ, OUTPUT_MODE_MULTIPLEXED_FUNCTION_PUSH_PULL, PIN_DEFAULT);
 
-    while (1)
-    {
-        // Toggle Pin
-        GPIO_TogglePin(GPIOD, GPIO_PIN_0);
-        for (uint32_t i = 0; i < 5000000; i++)
-            ;
-    }
+    while (1);
 }
