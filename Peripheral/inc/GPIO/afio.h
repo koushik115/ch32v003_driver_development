@@ -38,7 +38,8 @@ typedef enum
     AFIO_MAP_DEFAULT_MAP, /**< Use the default peripheral pinout. */
     AFIO_MAP_REMAP1,      /**< Partial or full remap level 1. */
     AFIO_MAP_REMAP2,      /**< Partial or full remap level 2. */
-    AFIO_MAP_REMAP3       /**< Partial or full remap level 3. */
+    AFIO_MAP_REMAP3,      /**< Partial or full remap level 3. */
+    AFIO_MAP_REMAP4       /**< Partial or full remap level 4. */
 } AFIO_MAP;               // Added missing semicolon
 
 /**
@@ -46,9 +47,9 @@ typedef enum
  */
 typedef enum
 {
-    AFIO_EXTI_GPIO_GPIOA, /**< Use Port A for EXTI line. */
-    AFIO_EXTI_GPIO_GPIOC, /**< Use Port C for EXTI line. */
-    AFIO_EXTI_GPIO_GPIOD  /**< Use Port D for EXTI line. */
+    AFIO_EXTI_GPIO_GPIOA,     /**< Use Port A for EXTI line. */
+    AFIO_EXTI_GPIO_GPIOC = 2, /**< Use Port C for EXTI line. */
+    AFIO_EXTI_GPIO_GPIOD      /**< Use Port D for EXTI line. */
 } AFIO_EXTI_GPIO;
 
 // --- FUNCTION PROTOTYPES ---
