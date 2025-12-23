@@ -117,7 +117,7 @@ void EXTI_EventInit(EXTI_INT_EVEN_EN enable_disable, EXTI_INT_EVEN channel);
  * @param edgeDetect Rising or Falling edge.
  * @param channel The EXTI line to configure.
  */
-void EXTI_EdgeTriggerConfig(EXTI_EDGETRG_EN edgeDetect, EXTI_EDGETRG channel);
+void EXTI_EdgeTriggerConfig(EXTI_INT_EVEN_EN enable_disable, EXTI_EDGETRG_EN edgeDetect, EXTI_EDGETRG channel);
 
 /**
  * @brief Generates a software interrupt on the specified line.
