@@ -44,6 +44,7 @@ void EXTI_EventInit(EXTI_INT_EVEN_EN enable_disable, EXTI_INT_EVEN channel)
         break;
 
     default:
+    
         break;
     }
 }
